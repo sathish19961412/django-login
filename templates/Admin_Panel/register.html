@@ -1,0 +1,34 @@
+
+{% extends "index.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-12 text-center">
+                     <h3>User Registration</h3>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-6 well">
+                    <div class="mt-5">
+                        <form method="post" autocomplete="off">
+                            {% if messages %}
+                                  {% for message in messages%}
+                                     <div class="alert alert-{{message.tags}}">
+                                         {{message}}
+                                     </div>
+                                  {% endfor %}
+                                {% endif %}
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <button type="submit" class="btn btn-success text-white">Register</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3">&nbsp;</div>
+           </div>
+        </div>
+    </section>
+{% endblock %}

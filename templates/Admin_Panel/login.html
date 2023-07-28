@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+             <div class="col-md-12 text-center">
+                 <h3 class="pt-3 pb-3">User Login</h3>
+             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-md-6 well p-3">
+                <div class="mt-5">
+                    {% if messages %}
+                        {% for message in messages%}
+                        <div class="alert alert-{{message.tags}}">
+                            {{message}}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    <form method="post" autocomplete="off">
+                          {% csrf_token %}
+                          {{form.as_p}}
+                          <button type="submit" class="btn btn-info">Login</button>
+                    </form>
+                    <div>
+                        <a href="{% url 'Register' %}" class="btn btn-success">Signup Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">&nbsp;</div>
+       </div>
+    </div>
+</section>
+{% endblock %}

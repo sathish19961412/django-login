@@ -1,0 +1,11 @@
+.color1{
+    color:#fff;
+    font-size:24px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color:#fff;
+}
+.well{
+    background: #f0f0f0;
+    box-shadow:2px 2px 15px 0px black;
+}

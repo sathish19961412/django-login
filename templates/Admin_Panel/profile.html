@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 ">&nbsp;</div>
+            <div class="col-md-8 pt-3">
+               <table class="table table-bordered">
+                  <tr>
+                      <h3 class="bg-info text-white p-2 text-center">User Details</h3>
+                  </tr>
+                  <tr>
+                    <th>UserName</th>
+                    <td>{{user.username}}</td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td>{{user.email}}</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="col-md-2 ">&nbsp;</div>
+       </div>
+    </div>
+</section>
+{% endblock %}

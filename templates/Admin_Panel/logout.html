@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 p-3">
+                <div class="mt-5">
+                     <h1>You have been logout</h1>
+                     <hr>
+                     Login Again ? <a href="{% url 'Login' %}" class="btn btn-success">Login</a>
+                </div>
+            </div>
+       </div>
+    </div>
+</section>
+{% endblock %}
